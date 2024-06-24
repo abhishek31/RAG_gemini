@@ -1131,12 +1131,12 @@ Delete the Google Cloud Assets and clean up your environment:
 """
 
 # Delete your GCS Bucket
-! gcloud alpha storage rm --recursive {rag_info["bucket_uri"]}
+#! gcloud alpha storage rm --recursive {rag_info["bucket_uri"]}
 
 # Undeploy your Index Endpoint
-rag_info["my_index_endpoint"].delete(force=True)
+#rag_info["my_index_endpoint"].delete(force=True)
 
 # Delete your Index. This command will take 15-25 minutes to delete.
-rag_info["index"].delete()
+#rag_info["index"].delete()
 
 """For the final step, delete your index from [the Google Cloud Vector Search UI](https://console.cloud.google.com/vertex-ai/matching-engine/indexes)."""
